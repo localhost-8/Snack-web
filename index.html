@@ -1,6 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" class="offline" lang="ru">
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+                               maximum-scale=1.0, user-scalable=yes">
+  <meta name="Snake Game" content="#fff">
+  <link type="image/x-icon" rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+  <link type="image/png" sizes="16x16" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+  <link type="image/png" sizes="32x32" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+  <link type="image/png" sizes="96x96" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+  <link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
   <title>Snake Game</title>
   <meta charset="UTF-8">
   <style>
@@ -18,9 +29,22 @@
   canvas {
     border: 1px solid white;
   }
+    
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
   </style>
 </head>
-<body>
+<body id="typing" class="neterror" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%"
+jstcache="0" contenteditable="false">
+<div class="noselect">
+<div class="container">
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
@@ -50,8 +74,6 @@ var apple = {
   y: 320
 };
 
-// get random whole numbers in a specific range
-// @see https://stackoverflow.com/a/1527820/2124254
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
